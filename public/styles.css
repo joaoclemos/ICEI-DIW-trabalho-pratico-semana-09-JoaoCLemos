@@ -1,8 +1,21 @@
 /* Estilo global do site */
+/* Estilo global do site */
+* {
+    background-color: #121212;
+    color: white;
+    box-sizing: border-box; /* Evita que padding/margin cause overflow */
+}
+
+html, body {
+    max-width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+}
 * {
     background-color: #121212;
     /* Define o fundo da página como preto */
     color: white;
+    
     /* Define a cor do texto como branco */
 }
 
@@ -56,69 +69,57 @@ header .logo {
 }
 
 /* NAV - Navegação */
+/* Container de navegação com menor espaço entre os itens */
 nav ul {
-    display: flex;
-    justify-content: flex-end;
-    /* Alinha os itens à direita */
-    list-style: none;
+    list-style: none; /* Remove os pontos de lista */
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin-right: 15px;
-    /* Espaçamento entre os itens */
+    display: inline-block; /* Faz os itens ficarem lado a lado */
 }
 
 nav ul li a {
     text-decoration: none;
-    /* Remove o sublinhado dos links */
     color: white;
-    /* Define a cor do texto como branco */
     font-size: 18px;
-    /* Aumenta o tamanho da fonte */
     font-weight: bold;
-    /* Deixa o texto em negrito */
     transition: color 0.3s ease;
-    /* Adiciona um efeito suave ao passar o mouse */
+    border-radius: 30px;
+    padding: 8px 16px; /* Ajuste no tamanho do botão */
+    background-color: #dc3545; /* Cor de fundo vermelha */
+    margin-right: 5px; /* Diminuindo o espaço entre os botões */
 }
 
 nav ul li a:hover {
-    color: #ff0000;
-    /* Muda a cor ao passar o mouse (vermelho, por exemplo) */
+    color: #ff0000; /* Efeito hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.5);
 }
 
-/* Para telas pequenas, o menu será reorganizado */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: row;
-        /* Menu em coluna */
-        align-items: left;
-        /* Alinha os itens ao centro */
-        margin-top: 20px;
-        margin-left: 10px;
-        margin-right: 35px;
-    }
-
-    nav ul li {
-        margin: 3px;
-        /* Mais espaço entre os itens */
-    }
-
-    nav ul li a {
-        font-size: 14px;
-        /* Diminui o tamanho da fonte */
-        margin: 0px;
-    }
+/* Botões com bordas arredondadas */
+.nav-item .btn {
+    border-radius: 30px; /* Borda arredondada */
+    padding: 8px 16px; /* Ajuste no tamanho do botão */
 }
+
 
 
 /* FORMULÁRIO DE PESQUISA */
 form {
+    position: flex;
+    top: 10px; /* Ajuste essa altura conforme a posição real abaixo do login */
+    left: 100px;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+    z-index: 10; /* Garante que fique visível acima de outros elementos, se necessário */
+    transform: scale(1.1);
 }
+
 
 form input[type="search"] {
     padding: 10px 15px;
@@ -126,38 +127,34 @@ form input[type="search"] {
     border: 2px solid #ccc;
     outline: none;
     width: 250px;
-    /* Largura do campo de pesquisa */
+    border-radius: 20px; /* Torna o campo arredondado */
 }
 
 form input[type="search"]:focus {
     border-color: #007BFF;
-    /* Altera a cor da borda quando focado */
 }
 
 /* BOTÃO DE PESQUISA */
 form button[type="submit"] {
     display: flex;
-    align-items: center;
     justify-content: center;
-    /* Centraliza a lupa no meio */
+    align-items: center; /* Garante centralização vertical também */
     width: 40px;
-    /* Ajusta o tamanho do botão */
     height: 40px;
-    /* Mantém o formato quadrado */
     background-color: #ff0000;
-    /* Cor vermelha para destaque */
     color: white;
     border: none;
     border-radius: 50%;
-    /* Torna o botão circular */
     cursor: pointer;
     margin-left: 10px;
     font-size: 18px;
-    /* Ajusta o tamanho do ícone */
+    /* Aumenta o tamanho do botão ao passar o mouse */
 }
 
 form button[type="submit"]:hover {
     background-color: #6e5050;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.5);
 }
 
 /* Responsivo */
@@ -165,47 +162,52 @@ form button[type="submit"]:hover {
     form {
         flex-direction: row;
         align-items: center;
+        margin-left: -20px; /* Ajuste aqui para mover mais para a esquerda */
     }
 
     form input[type="search"] {
-        width: 25%;
-        /* Ajuste proporcional para dispositivos menores */
-        margin-bottom: 10px;
+        width: 35%;
+        height: 25%;
+        margin-bottom: 13px;
+        margin-top: 13px;
+        margin-left: 140px;
         font-size: 10px;
     }
 
     form button[type="submit"] {
         width: 30px;
-        height: 40px;
+        height: 30px;
         font-size: 16px;
-        /* Ajusta o tamanho do ícone */
     }
 }
 
+
 /* CONTAINER DE LOGIN */
 .login-container {
-    width: 250px;
+    width: 220px;
     /* Aumenta o tamanho do container */
     height: auto;
     /* Ajusta a altura conforme o conteúdo */
     position: absolute;
-    top: 100px;
-    left: 10px;
+    top: 135px;
+    left: 20px;
     /* Alinha o container à esquerda */
-    border-radius: 8px;
+    border-radius: 10px;
     /* Bordas arredondadas */
     font-size: 14px;
+    margin-top: 0px;
 }
 
 /* Estilo dos campos de input */
 .login-container input {
-    width: 100%;
+    width: 80px;
+    height: 35px;
     /* Faz os campos ocuparem toda a largura */
     padding: 12px;
     margin-bottom: 10px;
     border: 2px solid #ccc;
     /* Borda padrão */
-    border-radius: 4px;
+    border-radius: 10px;
     /* Bordas arredondadas */
     font-size: 14px;
 }
@@ -236,6 +238,8 @@ form button[type="submit"]:hover {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     /* Suaviza transições */
+    transform: scale(1.1);
+    /* Aumenta o tamanho do botão ao passar o mouse */
 }
 
 /* Efeito ao passar o mouse */
@@ -246,7 +250,7 @@ form button[type="submit"]:hover {
     /* Torna o texto um pouco mais escuro */
     box-shadow: 0 6px 12px rgba(255, 0, 0, 0.5);
     /* Sombra mais intensa */
-    transform: scale(1.05);
+    transform: scale(1.1);
     /* Aumenta o tamanho do botão ao passar o mouse */
 }
 
@@ -261,7 +265,7 @@ form button[type="submit"]:hover {
         width: 25%;
         /* Reduz um pouco o tamanho */
         position: absolute;
-        top: 96px;
+        top: 120px;
         /* Ajusta a posição mais para cima */
         left: 80px;
         /* Move para a esquerda */
@@ -374,7 +378,7 @@ form button[type="submit"]:hover {
 
 /* MAIN - Conteúdo principal */
 main {
-    margin-top: 170px;
+    margin-top: 160px;
     /* Garante espaço entre o cabeçalho fixo e o conteúdo */
 }
 

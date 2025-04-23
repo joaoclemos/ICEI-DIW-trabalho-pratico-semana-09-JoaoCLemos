@@ -149,7 +149,7 @@
     <main>
         <!-- Seção Itens em Destaque -->
         <section class="mt-5 mb-5">
-            <h2 class="text-center mb-4">Itens em Destaque</h2>
+            <h2 class="text-center mb-4 destaque-titulo">Itens em Destaque</h2>
             <div id="destaquesCarousel" class="carousel slide">
                 <!-- Indicadores serão gerados dinamicamente pelo JavaScript -->
                 <div class="carousel-indicators" id="carousel-indicators"></div>            
@@ -181,13 +181,58 @@
 
     </main>
 
-    <footer class="text-white text-center py-4">
-        <ul class="list-unstyled d-flex justify-content-center mb-3">
-            <li><a class="text-white" href="#">Termos de Uso</a></li>
-            <li><a class="text-white ms-3" href="#">Política de Privacidade</a></li>
-            <li><a class="text-white ms-3" href="#">Contato</a></li>
-        </ul>
-        <p>&copy; 2025 JL Max - Todos os direitos reservados.</p>
+    <footer class="text-white py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Links e copyright centralizados -->
+                <div class="col-12 text-center mb-4">
+                    <ul class="list-unstyled d-flex justify-content-center flex-wrap gap-3 mb-3">
+                        <li><a class="text-white" href="#">Termos de Uso</a></li>
+                        <li><a class="text-white" href="#">Política de Privacidade</a></li>
+                        <li><a class="text-white" href="#">Contato</a></li>
+                    </ul>
+                    <p class="mb-0">&copy; 2025 JL Max - Todos os direitos reservados.</p>
+                </div>
+                
+                <!-- Seção de autoria à direita com foto -->
+                <div class="col-12 text-center text-md-end">
+                    <div class="autoria-container d-inline-block text-start">
+                        <div class="autoria-container d-inline-block">
+                            <div class="d-flex flex-column align-items-center"> <!-- Alterado para flex-column -->
+                                <!-- Foto centralizada -->
+                                <div class="profile-pic-container mb-3">
+                                    <img src="Fotos/autoria.jpg" alt="João Carvalho Lemos" class="profile-pic">
+                                </div>
+                                
+                                <!-- Informações -->
+                                <div class="text-center"> <!-- Adicionado text-center -->
+                                    <h6 class="dadostitulo mb-2">Informações do(a) Aluno(a)</h6>
+                                    <div class="info-item d-flex justify-content-center">
+                                        <span>Aluno: João Carvalho Lemos</span>
+                                    </div>
+                                    <div class="info-item d-flex justify-content-center">
+                                        <span>Curso: Ciência da Computação</span>
+                                    </div>
+                                    <div class="info-item d-flex justify-content-center">
+                                        <span>Turma: Manhã</span>
+                                    </div>
+                                    
+                                    <div class="social-links d-flex justify-content-center mt-3">
+                                        <span class="me-2">Redes Sociais:</span>
+                                        <a href="https://instagram.com/joaoclemos_" class="me-2" target="_blank">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 20px; height: 20px;">
+                                        </a>
+                                        <a href="https://github.com/joaoclemos" target="_blank">
+                                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 20px; height: 20px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
